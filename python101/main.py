@@ -1,7 +1,6 @@
 # logic game
 
-user_option = input('rock, paper or scissors: ')
-user_option = user_option.lower()
+user_option = input('rock, paper or scissors: ').lower().strip()
 com_option = 'scissors'
 print(f'User choice {user_option} vs computer choice {com_option}')
 
