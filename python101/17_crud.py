@@ -1,12 +1,17 @@
 # CRUD - Create, Read, Update & Delete
 
 #create
+print('Create')
+
 numbers = [1, 2, 3, 4, 5]
 
 #Read
+print('Read')
+
 print(numbers[1])
 
 #Update
+print('Update')
 numbers[-1] = 10
 print(numbers)
 
@@ -42,6 +47,7 @@ strings.sort()
 print(strings)
 
 #Delete
+print('Delete')
 
 new_list.remove('to do 1')
 print(new_list)
