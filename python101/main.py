@@ -1,8 +1,16 @@
+import random
+
 # logic game
 
+options = ('rock', 'paper', 'scissors')
+
 user_option = input('rock, paper or scissors: ').lower().strip()
-com_option = 'scissors'
-print(f'User choice {user_option} vs computer choice {com_option}')
+com_option = random.choice(options)
+
+if not user_option in options:
+    print('This choice is invalid!!!')
+else:
+    print(f'User choice {user_option} vs computer choice {com_option}')
 
 # logical approach
 
