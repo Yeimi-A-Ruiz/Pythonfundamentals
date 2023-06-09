@@ -29,7 +29,7 @@ leads = [
         'age': 10
     },
     {
-        'name': 'Dano',
+        'name': 'Dani',
         'age': 8
     },
     {

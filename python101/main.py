@@ -4,46 +4,91 @@ import random
 
 options = ('rock', 'paper', 'scissors')
 
-user_option = input('rock, paper or scissors: ').lower().strip()
-com_option = random.choice(options)
+Com_wins = 0
+User_wins = 0
+rounds = 1
 
-if not user_option in options:
-    print('This choice is invalid!!!')
-else:
-    print(f'User choice {user_option} vs computer choice {com_option}')
+while True:
 
-# logical approach
+    print('*' * 10)
+    print('ROUND', rounds)
+    print('*' * 10)
 
-"""
-equal selection tie
-rock beats scissors
-scissors beats paper
-paper beats rock
-"""
+    print(f'COM {Com_wins} Vs. USER {User_wins}')
 
-if user_option == com_option:
-    print('tie!')
+    user_option = input('rock, paper or scissors: ').lower().strip()
+    com_option = random.choice(options)
 
-elif user_option == 'rock':
-    if com_option == 'scissors':
-        print('rock beats scissors')
-        print('User wins!')
+    if not user_option in options:
+        print('This choice is invalid!!!')
+        print('')
     else:
-        print('paper beats rock')
-        print('Com wins!')
+        print(f'User choice {user_option} vs computer choice {com_option}')
 
-elif user_option == 'scissors':
-    if com_option == 'paper':
-        print('scissors beats paper')
-        print('User wins')
-    else:
-        print('rock beats scissors')
-        print('Com wins!')
+        # logical approach
 
-elif user_option == 'paper':
-    if com_option == 'rock':
-        print('paper beats rock')
-        print('User wins!')
-    else:
-        print('scissors beats paper')
-        print('Com wins!')
+        """
+        equal selection tie
+        rock beats scissors
+        scissors beats paper
+        paper beats rock
+        """
+
+        if user_option == com_option:
+            print('')
+            print('tie!')
+            print('')
+
+        elif user_option == 'rock':
+            if com_option == 'scissors':
+                print('rock beats scissors')
+                print('')
+                print('User wins!'.upper())
+                print('')
+                User_wins += 1
+            else:
+                print('paper beats rock')
+                print('')
+                print('Com wins!'.upper())
+                print('')
+                Com_wins += 1
+
+        elif user_option == 'scissors':
+            if com_option == 'paper':
+                print('scissors beats paper')
+                print('')
+                print('User wins'.upper())
+                print('')
+                User_wins += 1
+            else:
+                print('rock beats scissors')
+                print('')
+                print('Com wins!'.upper())
+                print('')
+                Com_wins += 1
+
+        elif user_option == 'paper':
+            if com_option == 'rock':
+                print('paper beats rock')
+                print('')
+                print('User wins!'.upper())
+                print('')
+                User_wins += 1
+            else:
+                print('scissors beats paper')
+                print('')
+                print('Com wins!'.upper())
+                print('')
+                Com_wins += 1
+    
+    if Com_wins == 2:
+        print(f'COM {Com_wins} Vs. USER {User_wins}')
+        print('The computer wins the game!'.upper())
+        break
+
+    if User_wins == 2:
+        print(f'COM {Com_wins} Vs. USER {User_wins}')
+        print('The user wins the game!'.upper())
+        break
+
+    rounds += 1
