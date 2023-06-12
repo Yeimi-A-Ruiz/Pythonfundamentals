@@ -1,5 +1,5 @@
-#for element in range(1,21):
- #   print(element)
+for element in range(1,21):
+    print(element)
 
 my_list = [23, 45, 67, 89, 43]
 
